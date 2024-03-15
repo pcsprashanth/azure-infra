@@ -29,7 +29,7 @@ jobs:
               uses: hashicorp/setup-terraform@v1
               with:
                     terraform_version: 0.14.0
-               run: echo "current working directory is $(pwd)"
+               
 
             - name: Install Terragrunt
               run: |
@@ -40,6 +40,7 @@ jobs:
 
             - name: Terragrunt Init
               run: terragrunt init
+              working-directory: environments/dev
               
 
             - name: Terragrunt Plan
