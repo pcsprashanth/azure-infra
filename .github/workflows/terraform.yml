@@ -40,23 +40,27 @@ jobs:
             
             - name: Print GitHub repository
               run: echo $GITHUB_REPOSITORY
+
             - name: Checkout repository
               uses: actions/checkout@v2
+
+            - name: current the working directory
+              run: pwd
+
             - name: List directory contents
               run: ls -la /home/runner/work
   
             - name: Change working directory
               run: |
-                cd /home/runner/work/pcsprashanth/azure-infra
-                pwd  # This should now print /home/runner/work/pcsprashanth/azure-infra
+                cd /home/runner/work/azure-infra/azure-infra
+                pwd  # This should now print /home/runner/work/azure-infra/azure-infra
             
             - name: current the working directory
               run: pwd
             
             - name: Terragrunt Init
               run: terragrunt init
-              working-directory: home/runner/work/azure-infra/
-              
+                
 
             - name: Terragrunt Plan
               run: terragrunt plan
