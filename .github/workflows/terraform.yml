@@ -43,7 +43,7 @@ jobs:
             
             - name: Terragrunt Init
               run: terragrunt init
-              working-directory: environments/dev
+              working-directory: home/runner/work/azure-infra/
               
 
             - name: Terragrunt Plan
