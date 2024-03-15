@@ -38,8 +38,8 @@ jobs:
                     chmod +x terragrunt_linux_amd64
                     sudo mv terragrunt_linux_amd64 /usr/local/bin/terragrunt
             
-            - name: Checkout
-              uses: actions/checkout@v3
+            - name: current the working directory
+              run: pwd
             
             - name: Terragrunt Init
               run: terragrunt init
