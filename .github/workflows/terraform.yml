@@ -37,9 +37,12 @@ jobs:
 
             - name: Terragrunt Init
               run: terragrunt init
+              working-directory: environments
 
             - name: Terragrunt Plan
               run: terragrunt plan
+              working-directory: environments
 
             - name: Terragrunt Apply
               run: terragrunt apply -auto-approve
+              working-directory: environments
