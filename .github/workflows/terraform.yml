@@ -40,7 +40,12 @@ jobs:
             
             - name: Print GitHub repository
               run: echo $GITHUB_REPOSITORY
-                      
+
+            - name: Change working directory
+              run: |
+                cd /home/runner/work/pcsprashanth/azure-infra
+                pwd  # This should now print /home/runner/work/pcsprashanth/azure-infra
+            
             - name: current the working directory
               run: pwd
             
