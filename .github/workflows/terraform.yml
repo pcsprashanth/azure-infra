@@ -49,6 +49,9 @@ jobs:
 
             - name: List directory contents
               run: ls -la /home/runner/work
+
+            - name: List repository contents
+              run: ls -la /home/runner/work/azure-infra/azure-infra
   
             - name: Change working directory
               run: |
