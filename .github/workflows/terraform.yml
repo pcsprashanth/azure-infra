@@ -58,6 +58,7 @@ jobs:
             - name: current the working directory
               run: pwd
             
+              
             - name: Terragrunt Init
               run: terragrunt init
               working-directory: /home/runner/work/pcsprashanth/azure-infra/environments/dev/
