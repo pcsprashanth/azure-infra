@@ -61,7 +61,7 @@ jobs:
 
             - name: Terragrunt Init
               run: terragrunt init
-              
+              working-directory: /environments/
                 
 
             - name: Terragrunt Plan
