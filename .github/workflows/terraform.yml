@@ -28,7 +28,7 @@ jobs:
             - name: Setup Terraform
               uses: hashicorp/setup-terraform@v1
               with:
-                    terraform_version: 0.14.0
+                    terraform_version: 1.7.5
                
 
             - name: Install Terragrunt
@@ -66,7 +66,8 @@ jobs:
 
             - name: Terragrunt Plan
               run: terragrunt plan
-              
+              working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/
 
             - name: Terragrunt Apply
               run: terragrunt apply -auto-approve
+              working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/
