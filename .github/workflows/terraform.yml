@@ -60,8 +60,8 @@ jobs:
               run: pwd
             
 
-            - name: Terragrunt Init
-              run: terragrunt init
+            - name: Terragrunt validate
+              run: terragrunt validate
               working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/ 
                 
 
