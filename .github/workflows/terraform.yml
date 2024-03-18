@@ -59,16 +59,20 @@ jobs:
             - name: current the working directory
               run: pwd
             
-
-            - name: Terragrunt validate
-              run: terragrunt validate
-              working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/ 
-            
             - name: Save state
               run: echo "{name}={value}" >> $GITHUB_STATE
               
             - name: Set output
               run: echo "{name}={value}" >> $GITHUB_OUTPUT
+
+            - name: Terragrunt init
+              run: terragrunt init
+              working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/ 
+            
+            - name: Terragrunt validate
+              run: terragrunt validate
+              working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/
+            
 
             - name: Terragrunt Plan
               run: terragrunt plan
