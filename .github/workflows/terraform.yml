@@ -9,6 +9,7 @@ jobs:
     terragrunt:
         name: 'Terragrunt'
         runs-on: ubuntu-latest
+        
         permissions:
             id-token: write
             contents: write
@@ -37,28 +38,7 @@ jobs:
                     curl -LOs https://github.com/gruntwork-io/terragrunt/releases/download/${TERRAGRUNT_VERSION}/terragrunt_linux_amd64
                     chmod +x terragrunt_linux_amd64
                     sudo mv terragrunt_linux_amd64 /usr/local/bin/terragrunt
-              
-
-            - name: Print GitHub repository
-              run: echo $GITHUB_REPOSITORY
-
-            - name: current the working directory
-              run: pwd
-
-            - name: List directory contents
-              run: ls -la /home/runner/work
-
-            - name: List repository contents
-              run: ls -la /home/runner/work/azure-infra/azure-infra
-  
-            - name: Change working directory
-              run: |
-                cd /home/runner/work/azure-infra/azure-infra
-                pwd  # This should now print /home/runner/work/azure-infra/azure-infra
-            
-            - name: current the working directory
-              run: pwd
-            
+           
             - name: Save state
               run: echo "{name}={value}" >> $GITHUB_STATE
               
@@ -66,14 +46,13 @@ jobs:
               run: echo "{name}={value}" >> $GITHUB_OUTPUT
 
             - name: Terragrunt init
-              run: terragrunt init
+              run: terraform init
               working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/ 
             
             - name: Terragrunt validate
               run: terragrunt validate
               working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/
             
-
             - name: Terragrunt Plan
               run: terragrunt plan
               working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/
