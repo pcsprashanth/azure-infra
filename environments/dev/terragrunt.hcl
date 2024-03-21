@@ -1,7 +1,7 @@
 # environments/dev/terragrunt.hcl
 
 terraform {
-    source = "../../modules//"
+    source = "../../modules/"
 }
 
 inputs = {
