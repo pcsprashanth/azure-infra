@@ -45,7 +45,7 @@ jobs:
            
             - name: Terragrunt init
               run: terragrunt init
-              working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/ 
+              working-directory: /home/runner/work/azure-infra/azure-infra/environments/dev/
             
             - name: Terragrunt validate
               run: terragrunt validate
