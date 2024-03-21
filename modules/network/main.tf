@@ -1,4 +1,9 @@
 # modules/network/main.tf
+resource "azurerm_resource_group" "rg" {
+    name     = "my-resources"
+    location = "West Europe"
+}
+
 resource "azurerm_virtual_network" "vnet" {
     name                = "${var.environment}-network"
     location            = var.region
