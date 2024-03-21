@@ -6,5 +6,5 @@ terraform {
 
 inputs = {
     environment = "dev"
-    region      = "us-west-2"
+    region      = "westus2"
 }
