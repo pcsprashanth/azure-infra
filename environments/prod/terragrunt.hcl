@@ -6,6 +6,6 @@ terraform {
 
 inputs = {
     environment = "prod"
-    region      = "us-east-1"
+    region      = "eastus"
     name = "my-resources-prod"
 }
