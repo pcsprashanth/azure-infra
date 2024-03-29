@@ -4,6 +4,8 @@ on:
     push:
         branches:
             - main
+        paths:
+            - 'environments/prod/**'    
 env:
       ENV_NAME: prod
 
