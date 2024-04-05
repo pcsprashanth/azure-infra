@@ -72,6 +72,7 @@ jobs:
                 terraform init
               working-directory: /home/runner/work/azure-infra/azure-infra/
             
+              
             - name: Terraform validate
               run: terraform validate
               working-directory: /home/runner/work/azure-infra/azure-infra/
