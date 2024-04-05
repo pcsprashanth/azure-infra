@@ -10,4 +10,5 @@ variable "root_name" {
 
 variable "default_location" {
   type    = string
+  default = "eastus"
 }
