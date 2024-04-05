@@ -37,6 +37,38 @@ jobs:
                     
             - name: Terraform Version
               run: terraform --version
+            
+            - name: Check Terraform Backend Configuration and Create if Non-EXISTENT
+              id: check_backend
+              run: |
+                tfstate_file=".terraform/terraform-policy.tfstate"
+                if [ ! -f "$tfstate_file" ]; then
+                  # Create RG
+                  az group create --name ITAUTEST --location brazilsouth
+                  # Create Storage and container
+                  az storage account create --name chandrastorage143 --resource-group ITAUTEST --location brazilsouth --sku Standard_LRS --kind StorageV2 --encryption-services blob
+                  accountKey=$(az storage account keys list --account-name chandrastorage143 --resource-group ITAUTEST --output tsv --query "[0].value")
+                  az storage container create --name chandracontainer1 --account-name chandrastorage143 --account-key $accountKey
+                  # Enable storage versioning
+                  az storage account blob-service-properties update --account-name chandrastorage143 --resource-group ITAUTEST --enable-versioning true
+                  echo "::set-output name=accountKey::$accountKey"
+                fi
+              shell: bash
+        
+            - name: Initialize Terraform Backend
+              env:
+                ARM_ACCESS_KEY: ${{ steps.check_backend.outputs.accountKey }}
+              run: |
+                touch backend.tf
+                cat <<EOF > backend.tf
+                terraform {
+                  backend "azurerm" {
+                    storage_account_name = "chandrastorage143"
+                    container_name       = "chandracontainer1"
+                    key                  = "terraform-cts.tfstate"
+                  }
+                }
+                EOF
                 
 
             - name: Terraform init
