@@ -40,17 +40,17 @@ jobs:
                 
 
             - name: Terraform init
-              run: Terraform init
+              run: terraform init
               working-directory: /home/runner/work/azure-infra/azure-infra/
             
             - name: Terraform validate
-              run: Terraform validate
+              run: terraform validate
               working-directory: /home/runner/work/azure-infra/azure-infra/
             
             - name: Terraform Plan
-              run: Terraform plan
+              run: terraform plan
               working-directory: /home/runner/work/azure-infra/azure-infra/
 
             - name: Terraform Apply
-              run: Terraform apply -auto-approve
+              run: terraform apply -auto-approve
               working-directory: /home/runner/work/azure-infra/azure-infra/
