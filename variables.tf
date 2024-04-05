@@ -1,6 +1,6 @@
 variable "root_id" {
   type    = string
-  default = "cts"
+  default = "cts-parent-mg"
 }
 
 variable "root_name" {
