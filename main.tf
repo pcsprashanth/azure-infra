@@ -40,5 +40,107 @@ module "enterprise_scale" {
           access_control = {}
         }
       }
-   }
+       "${var.root_id}-platform" = {
+        display_name               = "Platform"
+        parent_management_group_id = "${var.root_id}"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+      "${var.root_id}-landingzones" = {
+        display_name               = "Landing Zones"
+        parent_management_group_id = "${var.root_id}"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+      "${var.root_id}-decom" = {
+        display_name               = "Decommissioned"
+        parent_management_group_id = "${var.root_id}"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+        # depends_on= [azurerm_subscription.connectivity1,azurerm_subscription.connectivity2]
+      }
+      "${var.root_id}-sandbox" = {
+        display_name               = "Sandbox"
+        parent_management_group_id = "${var.root_id}"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+      "${var.root_id}-iam" = {
+        display_name               = "Identity and Access Managment"
+        parent_management_group_id = "${var.root_id}-platform"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+      ##### landing zone #####
+      "${var.root_id}-management" = {
+        display_name               = "Management"
+        parent_management_group_id = "${var.root_id}-platform"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+      "${var.root_id}-connectivity" = {
+        display_name               = "Connectivity"
+        parent_management_group_id = "${var.root_id}-platform"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+      "${var.root_id}-prod" = {
+        display_name               = "SAP"
+        parent_management_group_id = "${var.root_id}-landingzones"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+      "${var.root_id}-dev" = {
+        display_name               = "CORP"
+        parent_management_group_id = "${var.root_id}-landingzones"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+      "${var.root_id}-homol" = {
+        display_name               = "Online"
+        parent_management_group_id = "${var.root_id}-landingzones"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+  }
 }
