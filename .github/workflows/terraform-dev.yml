@@ -72,7 +72,7 @@ jobs:
                 terraform init
               working-directory: /home/runner/work/azure-infra/azure-infra/
             
-              
+
             - name: Terraform validate
               run: terraform validate
               working-directory: /home/runner/work/azure-infra/azure-infra/
@@ -98,5 +98,6 @@ jobs:
               env:
                 ARM_ACCESS_KEY: ${{ steps.check_backend.outputs.accountKey }}
               id: tf-apply
+              # if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
               run: terraform apply -auto-approve tfplan
               working-directory: /home/runner/work/azure-infra/azure-infra/
