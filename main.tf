@@ -41,5 +41,4 @@ module "enterprise_scale" {
         }
       }
    }
-
 }
