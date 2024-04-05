@@ -69,10 +69,7 @@ jobs:
                   }
                 }
                 EOF
-                
-
-            - name: Terraform init
-              run: terraform init
+                terraform init
               working-directory: /home/runner/work/azure-infra/azure-infra/
             
             - name: Terraform validate
@@ -80,9 +77,25 @@ jobs:
               working-directory: /home/runner/work/azure-infra/azure-infra/
             
             - name: Terraform Plan
-              run: terraform plan
+              env:
+                ARM_ACCESS_KEY: ${{ steps.check_backend.outputs.accountKey }}
+              id: tf-plan
+              run: |
+                export exitcode=0
+                terraform plan -detailed-exitcode -no-color -lock=false -out tfplan || export exitcode=$?
+                echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
+               
+                if [ $exitcode -eq 1 ]; then
+                  echo Terraform Plan Failed!
+                  exit 1
+                else
+                  exit 0
+                fi
               working-directory: /home/runner/work/azure-infra/azure-infra/
 
             - name: Terraform Apply
-              run: terraform apply -auto-approve
+              env:
+                ARM_ACCESS_KEY: ${{ steps.check_backend.outputs.accountKey }}
+              id: tf-apply
+              run: terraform apply -auto-approve tfplan
               working-directory: /home/runner/work/azure-infra/azure-infra/
