@@ -100,3 +100,9 @@ jobs:
               id: tf-apply
               run: terraform apply -auto-approve tfplan
               working-directory: /home/runner/work/azure-infra/azure-infra/
+
+            - name: Publish Terraform Plan
+              uses: actions/upload-artifact@v3
+              with:
+                name: tfplan
+                path: tfplan
