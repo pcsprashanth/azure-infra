@@ -123,7 +123,7 @@ module "enterprise_scale" {
         }
       }
       "${var.root_id}-dev" = {
-        display_name               = "Test"
+        display_name               = "Dev"
         parent_management_group_id = "${var.root_id}-landingzones"
         subscription_ids           = []
         archetype_config = {
