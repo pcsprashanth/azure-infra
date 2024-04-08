@@ -77,6 +77,13 @@ jobs:
               run: terraform validate
               working-directory: /home/runner/work/azure-infra/azure-infra/
             
+            - name: Force Unlock Terraform State
+              env:
+                ARM_ACCESS_KEY: ${{ steps.check_backend.outputs.accountKey }}
+              run: |
+                terraform force-unlock -force 55df460e-aae1-9e05-dfa7-a3d6661a8fcb
+              working-directory: /home/runner/work/azure-infra/azure-infra/
+        
             - name: Terraform Plan
               env:
                 ARM_ACCESS_KEY: ${{ steps.check_backend.outputs.accountKey }}
