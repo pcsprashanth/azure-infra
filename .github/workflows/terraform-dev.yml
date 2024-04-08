@@ -92,7 +92,6 @@ jobs:
                 else
                   exit 0
                 fi
-              continue-on-error: true  
               working-directory: /home/runner/work/azure-infra/azure-infra/
 
             - name: Terraform Apply
