@@ -112,7 +112,7 @@ module "enterprise_scale" {
           access_control = {}
         }
       }
-      "${var.root_id}-prod" = {
+      "${var.root_id}-uat" = {
         display_name               = "UAT"
         parent_management_group_id = "${var.root_id}-landingzones"
         subscription_ids           = []
@@ -132,7 +132,7 @@ module "enterprise_scale" {
           access_control = {}
         }
       }
-      "${var.root_id}-homol" = {
+      "${var.root_id}-prod" = {
         display_name               = "Prod"
         parent_management_group_id = "${var.root_id}-landingzones"
         subscription_ids           = []
