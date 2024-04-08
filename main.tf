@@ -113,7 +113,7 @@ module "enterprise_scale" {
         }
       }
       "${var.root_id}-prod" = {
-        display_name               = "SAP"
+        display_name               = "UAT"
         parent_management_group_id = "${var.root_id}-landingzones"
         subscription_ids           = []
         archetype_config = {
@@ -123,7 +123,7 @@ module "enterprise_scale" {
         }
       }
       "${var.root_id}-dev" = {
-        display_name               = "CORP"
+        display_name               = "Test"
         parent_management_group_id = "${var.root_id}-landingzones"
         subscription_ids           = []
         archetype_config = {
@@ -133,7 +133,7 @@ module "enterprise_scale" {
         }
       }
       "${var.root_id}-homol" = {
-        display_name               = "Online"
+        display_name               = "Prod"
         parent_management_group_id = "${var.root_id}-landingzones"
         subscription_ids           = []
         archetype_config = {
