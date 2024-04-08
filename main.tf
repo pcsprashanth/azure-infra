@@ -33,7 +33,7 @@ module "enterprise_scale" {
       "${var.root_id}" = {
         display_name               = "${lower(var.root_name)}"
         parent_management_group_id = "${data.azurerm_client_config.core.tenant_id}"
-        subscription_ids           = ["f634425c-5b73-40e0-aa43-5844ce2b5416"]
+        subscription_ids           = []
         archetype_config = {
           archetype_id   = "default_empty"
           parameters     = {}
