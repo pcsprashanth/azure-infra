@@ -44,13 +44,13 @@ jobs:
                 tfstate_file=".terraform/terraform-policy.tfstate"
                 if [ ! -f "$tfstate_file" ]; then
                   # Create RG
-                  az group create --name ITAUTEST --location brazilsouth
+                  az group create --name ctstest --location brazilsouth
                   # Create Storage and container
-                  az storage account create --name chandrastorage143 --resource-group ITAUTEST --location brazilsouth --sku Standard_LRS --kind StorageV2 --encryption-services blob
-                  accountKey=$(az storage account keys list --account-name chandrastorage143 --resource-group ITAUTEST --output tsv --query "[0].value")
-                  az storage container create --name chandracontainer1 --account-name chandrastorage143 --account-key $accountKey
+                  az storage account create --name chandrastoragects --resource-group ctstest --location brazilsouth --sku Standard_LRS --kind StorageV2 --encryption-services blob
+                  accountKey=$(az storage account keys list --account-name chandrastoragects --resource-group ctstest --output tsv --query "[0].value")
+                  az storage container create --name chandracontainercts --account-name chandrastoragects --account-key $accountKey
                   # Enable storage versioning
-                  az storage account blob-service-properties update --account-name chandrastorage143 --resource-group ITAUTEST --enable-versioning true
+                  az storage account blob-service-properties update --account-name chandrastoragects --resource-group ctstest --enable-versioning true
                   echo "::set-output name=accountKey::$accountKey"
                 fi
               shell: bash
@@ -63,8 +63,8 @@ jobs:
                 cat <<EOF > backend.tf
                 terraform {
                   backend "azurerm" {
-                    storage_account_name = "chandrastorage143"
-                    container_name       = "chandracontainer1"
+                    storage_account_name = "chandrastoragects"
+                    container_name       = "chandracontainercts"
                     key                  = "terraform-cts.tfstate"
                   }
                 }
