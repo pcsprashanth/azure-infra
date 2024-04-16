@@ -5,7 +5,7 @@ variable "root_id" {
 
 variable "root_name" {
   type    = string
-  default = "cts-parent-mg"
+  default = "mim-root"
 }
 
 variable "default_location" {

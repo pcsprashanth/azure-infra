@@ -60,17 +60,6 @@ module "enterprise_scale" {
           access_control = {}
         }
       }
-      "${var.root_id}-decom" = {
-        display_name               = "Decommissioned"
-        parent_management_group_id = "${var.root_id}"
-        subscription_ids           = []
-        archetype_config = {
-          archetype_id   = "default_empty"
-          parameters     = {}
-          access_control = {}
-        }
-        # depends_on= [azurerm_subscription.connectivity1,azurerm_subscription.connectivity2]
-      }
       "${var.root_id}-sandbox" = {
         display_name               = "Sandbox"
         parent_management_group_id = "${var.root_id}"
@@ -81,8 +70,8 @@ module "enterprise_scale" {
           access_control = {}
         }
       }
-      "${var.root_id}-iam" = {
-        display_name               = "Identity and Access Managment"
+      "${var.root_id}-admin" = {
+        display_name               = "admin"
         parent_management_group_id = "${var.root_id}-platform"
         subscription_ids           = []
         archetype_config = {
@@ -92,8 +81,8 @@ module "enterprise_scale" {
         }
       }
       ##### landing zone #####
-      "${var.root_id}-management" = {
-        display_name               = "Management"
+      "${var.root_id}-common" = {
+        display_name               = "common"
         parent_management_group_id = "${var.root_id}-platform"
         subscription_ids           = []
         archetype_config = {
@@ -102,8 +91,8 @@ module "enterprise_scale" {
           access_control = {}
         }
       }
-      "${var.root_id}-connectivity" = {
-        display_name               = "Connectivity"
+      "${var.root_id}-security" = {
+        display_name               = "security"
         parent_management_group_id = "${var.root_id}-platform"
         subscription_ids           = []
         archetype_config = {
@@ -112,8 +101,18 @@ module "enterprise_scale" {
           access_control = {}
         }
       }
-      "${var.root_id}-uat" = {
-        display_name               = "UAT"
+      "${var.root_id}-foundation" = {
+        display_name               = "foundation"
+        parent_management_group_id = "${var.root_id}-platform"
+        subscription_ids           = []
+        archetype_config = {
+          archetype_id   = "default_empty"
+          parameters     = {}
+          access_control = {}
+        }
+      }
+      "${var.root_id}-cpcd" = {
+        display_name               = "cpcd"
         parent_management_group_id = "${var.root_id}-landingzones"
         subscription_ids           = []
         archetype_config = {
@@ -122,8 +121,8 @@ module "enterprise_scale" {
           access_control = {}
         }
       }
-      "${var.root_id}-dev" = {
-        display_name               = "Dev"
+      "${var.root_id}-pat" = {
+        display_name               = "pat"
         parent_management_group_id = "${var.root_id}-landingzones"
         subscription_ids           = []
         archetype_config = {
@@ -132,8 +131,8 @@ module "enterprise_scale" {
           access_control = {}
         }
       }
-      "${var.root_id}-prod" = {
-        display_name               = "Prod"
+      "${var.root_id}-dmz" = {
+        display_name               = "dmz"
         parent_management_group_id = "${var.root_id}-landingzones"
         subscription_ids           = []
         archetype_config = {
