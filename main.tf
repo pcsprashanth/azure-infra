@@ -10,7 +10,7 @@ data "azurerm_client_config" "core" {}
 
 module "enterprise_scale" {
   source  = "Azure/caf-enterprise-scale/azurerm"
-  version = "5.2.1"
+  version = "4.0.0"
 
   default_location = var.default_location
 
