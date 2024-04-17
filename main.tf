@@ -28,6 +28,7 @@ module "enterprise_scale" {
   ###### Deploys MG structure with naming convention provided by customer and disables deployment of default core structure ######
 
   deploy_core_landing_zones = false
+  
 
   custom_landing_zones = {
       "${var.root_id}" = {
