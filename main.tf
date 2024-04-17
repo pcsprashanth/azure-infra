@@ -28,7 +28,7 @@ module "enterprise_scale" {
   ###### Deploys MG structure with naming convention provided by customer and disables deployment of default core structure ######
 
   deploy_core_landing_zones = false
-  
+
 
   custom_landing_zones = {
       "${var.root_id}" = {
@@ -36,7 +36,7 @@ module "enterprise_scale" {
         parent_management_group_id = "${data.azurerm_client_config.core.tenant_id}"
         subscription_ids           = []
         archetype_config = {
-          archetype_id   = "es_root"
+          archetype_id   = "default_empty"
           parameters     = {}
           access_control = {}
         }
