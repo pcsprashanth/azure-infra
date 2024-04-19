@@ -106,49 +106,8 @@
                 }
             },
             "groupNames": []
-        },
-        {
-            "policyDefinitionReferenceId": "[Preview]: Deploy Microsoft Defender for Endpoint agent",
-            "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/e20d08c5-6d64-656d-6465-ce9e37fd0ebc",
-            "parameters": {},
-            "groupNames": []
-        },
-        {
-            "policyDefinitionReferenceId": "Microsoft cloud security benchmark",
-            "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
-            "parameters": {},
-            "groupNames": []
-        },
-        {
-            "policyDefinitionReferenceId": "Legacy - Enable Azure Monitor for VMs",
-            "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/55f3eceb-5573-4f18-9695-226972c6d74a",
-            "parameters": {},
-            "groupNames": []
-        },
-        {
-            "policyDefinitionReferenceId": "Legacy - Enable Azure Monitor for Virtual Machine Scale Sets",
-            "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/75714362-cae7-409e-9b99-a8e5075b7fad",
-            "parameters": {},
-            "groupNames": []
-        },
-        {
-            "policyDefinitionReferenceId": "Configure Advanced Threat Protection to be enabled on open-source relational databases",
-            "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/e77fc0b3-f7e9-4c58-bc13-cb753ed8e46e",
-            "parameters": {},
-            "groupNames": []
-        },
-        {
-            "policyDefinitionReferenceId": "Configure Azure Defender to be enabled on SQL Servers and SQL Managed Instances",
-            "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/9cb3cc7a-b39b-4b82-bc89-e5a5d9ff7b97",
-            "parameters": {},
-            "groupNames": []
-        },
-        {
-            "policyDefinitionReferenceId": "[Preview]: Resources should be Zone Resilient",
-            "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/130fb88f-0fc9-4678-bfe1-31022d71c7d5",
-            "parameters": {},
-            "groupNames": []
         }
+        
       ],
       "policyDefinitionGroups": null
     }
