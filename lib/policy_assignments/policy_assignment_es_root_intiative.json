@@ -6,7 +6,11 @@
       "description": "This initiative contains all Initiatives and Policies applicable to the root scope",
       "displayName": "",
       "notScopes": [],
-      "parameters": {},
+      "parameters": {
+        "logAnalytics": {
+          "value": "cts-test-log-analytics"
+        }
+      },
       "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/ES-Root-Policies",
       "nonComplianceMessages": [
         {
