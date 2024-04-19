@@ -11,7 +11,14 @@
         "version": "1.0.0",
         "category": "General"
       },
-      "parameters": {},
+      "parameters": {
+        "logAnalytics": {
+          "type": "String",
+          "metadata": {
+            "description": "Description of this parameter"
+          }
+        }
+      },
       "policyDefinitions": [
         {
           "policyDefinitionReferenceId": "Audit resource location matches resource group location",
