@@ -1,6 +1,6 @@
 {
     "es_root": {
-        "policy_assignments": ["Not-Allowed-Resources"],
+        "policy_assignments": ["Not-Allowed-Resources","ES-Root-Policies"],
         "policy_definitions": [],
         "policy_set_definitions": ["ES-Root-Policies"],
         "role_definitions": [],
