@@ -1,5 +1,5 @@
 {
-    "name": "Deploy-ASC-SecurityContacts",    
+    "name": "Deploy-Security-Contact",    
     "type": "Microsoft.Authorization/policyAssignments",
     "apiVersion": "2019-09-01",
     "properties": {
@@ -11,8 +11,7 @@
             "value": "cts-test-log-analytics"
           }
         },
-    "name": "Deploy-ASC-SecurityContacts",
-    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Deploy-ASC-SecurityContacts",   
+    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Deploy-Security-Contact",   
         "nonComplianceMessages": [
           {
             "message": "Resources {enforcementMode} not be in the specified types."

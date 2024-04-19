@@ -1,5 +1,5 @@
 {
-    "name": "Deploy-ASC-SecurityContacts",
+    "name": "Deploy-Security-Contact",
     "type": "Microsoft.Authorization/policyDefinitions",
     "apiVersion": "2021-06-01",
     "scope": null,
