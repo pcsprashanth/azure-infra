@@ -9,6 +9,60 @@
       "parameters": {
         "logAnalytics": {
           "value": "cts-test-log-analytics"
+        },
+        "emailSecurityContact": {
+          "value": "security_contact@replace_me"
+        },
+        "ascExportResourceGroupName": {
+          "value": "${root_scope_id}-asc-export"
+        },
+        "ascExportResourceGroupLocation": {
+          "value": "${default_location}"
+        },
+        "enableAscForServers": {
+          "value": "Disabled"
+        },
+        "enableAscForServersVulnerabilityAssessments": {
+          "value": "Disabled"
+        },
+        "vulnerabilityAssessmentProvider": {
+          "value": "default"
+        },
+        "enableAscForSql": {
+          "value": "Disabled"
+        },
+        "enableAscForAppServices": {
+          "value": "Disabled"
+        },
+        "enableAscForStorage": {
+          "value": "Disabled"
+        },
+        "enableAscForContainers": {
+          "value": "Disabled"
+        },
+        "enableAscForKeyVault": {
+          "value": "Disabled"
+        },
+        "enableAscForSqlOnVm": {
+          "value": "Disabled"
+        },
+        "enableAscForArm": {
+          "value": "Disabled"
+        },
+        "enableAscForDns": {
+          "value": "Disabled"
+        },
+        "enableAscForOssDb": {
+          "value": "Disabled"
+        },
+        "enableAscForCosmosDbs": {
+          "value": "Disabled"
+        },
+        "enableAscForApis": {
+          "value": "Disabled"
+        },
+        "enableAscForCspm": {
+          "value": "Disabled"
         }
       },
       "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/ES-Root-Policies",
