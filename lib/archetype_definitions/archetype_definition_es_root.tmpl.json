@@ -8,7 +8,8 @@
             "parameters": {
                 "ES-Root-Policies": {
                     "emailSecurityContact": "security_contact@replace_me",
-                    "ascExportResourceGroupName": "${root_scope_id}-asc-export1"
+                    "ascExportResourceGroupName": "${root_scope_id}-asc-export1",
+                    "ascExportResourceGroupLocation": "${default_location}"
                 }
             },
             "access_control": {}
