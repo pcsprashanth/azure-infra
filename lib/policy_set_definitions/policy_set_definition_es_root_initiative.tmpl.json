@@ -14,6 +14,7 @@
       "parameters": {
         "emailSecurityContact": {
           "type": "string",
+          "defaultValue": "security_contact@replace_me23",
           "metadata": {
             "displayName": "Security contacts email address",
             "description": "Provide email address for Microsoft Defender for Cloud contact details"
@@ -42,7 +43,7 @@
         },
         "ascExportResourceGroupName": {
           "type": "String",
-          "defaultValue": "${root_scope_id}-asc-export1",
+          "defaultValue": "${root_scope_id}-asc-export23",
           "metadata": {
             "displayName": "Resource Group name for the export to Log Analytics workspace configuration",
             "description": "The resource group name where the export to Log Analytics workspace configuration is created. If you enter a name for a resource group that doesn't exist, it'll be created in the subscription. Note that each resource group can only have one export to Log Analytics workspace configured."
