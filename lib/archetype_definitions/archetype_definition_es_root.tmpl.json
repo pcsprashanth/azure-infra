@@ -2,7 +2,7 @@
     "es_root": {
         "policy_assignments": ["Not-Allowed-Resources","ES-Root-Policies"],
         "policy_definitions": [],
-        "policy_set_definitions": ["ES-Root-Policies","Deploy-MDFC-Config","Deploy-ASC-SecurityContacts"],
+        "policy_set_definitions": ["ES-Root-Policies","Deploy-MDFC-Config","Deploy-Security-Contact"],
         "role_definitions": [],
         "archetype_config": {
             "parameters": {},
