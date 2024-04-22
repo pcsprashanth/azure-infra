@@ -12,12 +12,12 @@
         "category": "General"
       },
       "parameters": {
-        "logAnalytics": {
-          "type": "String",
-          "metadata": {
-            "description": "Description of this parameter"
-          }
-        },
+        // "logAnalytics": {
+        //   "type": "String",
+        //   "metadata": {
+        //     "description": "Description of this parameter"
+        //   }
+        // },
         "emailSecurityContact": {
           "type": "string",
           "metadata": {
