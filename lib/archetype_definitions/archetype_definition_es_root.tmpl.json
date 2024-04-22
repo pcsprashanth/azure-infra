@@ -9,10 +9,9 @@
                 "ES-Root-Policies": {
                     "emailSecurityContact": "security_contact@replace_me",
                     "ascExportResourceGroupName": "${root_scope_id}-asc-export1"
-                    }
-                    
                 }
             },
             "access_control": {}
         }
     }
+}
