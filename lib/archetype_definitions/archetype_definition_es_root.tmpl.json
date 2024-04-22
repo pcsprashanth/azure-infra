@@ -5,7 +5,13 @@
         "policy_set_definitions": ["ES-Root-Policies","Enforce-GR-KeyVault"],
         "role_definitions": [],
         "archetype_config": {
-            "parameters": {},
+            "parameters": {
+                "ES-Root-Policies": {
+                    "emailSecurityContact": {
+                        "value": "security_contact@replace_me"
+                    }
+                }
+            },
             "access_control": {}
         }
     }
