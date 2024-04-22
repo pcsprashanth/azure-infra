@@ -1,6 +1,6 @@
 {
     "es_root": {
-        "policy_assignments": ["Not-Allowed-Resources","ES-Root-Policies"],
+        "policy_assignments": ["Not-Allowed-Resources","ES-Root-Policies","Deploy-MDFC-Config"],
         "policy_definitions": ["Deploy-ASC-SecurityContacts"],
         "policy_set_definitions": ["ES-Root-Policies", "Deploy-MDFC-Config"],
         "role_definitions": [],
