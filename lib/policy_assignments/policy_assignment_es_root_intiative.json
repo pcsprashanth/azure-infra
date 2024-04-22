@@ -11,10 +11,10 @@
           "value": "cts-test-log-analytics"
         },
         "emailSecurityContact": {
-          "value": "security_contact@replace_me"
+          "value": "security_contact@replace_me1"
         },
         "ascExportResourceGroupName": {
-          "value": "${root_scope_id}-asc-export"
+          "value": "${root_scope_id}-asc-export1"
         },
         "ascExportResourceGroupLocation": {
           "value": "${default_location}"
