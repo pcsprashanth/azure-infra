@@ -46,7 +46,7 @@ module "enterprise_scale" {
         parent_management_group_id = "${var.root_id}"
         subscription_ids           = []
         archetype_config = {
-          archetype_id   = "default_empty"
+          archetype_id   = "es_platform"
           parameters     = {}
           access_control = {}
         }
