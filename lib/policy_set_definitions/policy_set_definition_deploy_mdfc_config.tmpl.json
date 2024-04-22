@@ -18,6 +18,7 @@
       "parameters": {
         "emailSecurityContact": {
           "type": "string",
+          "defaultValue": "security_contact@replace_me",
           "metadata": {
             "displayName": "Security contacts email address",
             "description": "Provide email address for Microsoft Defender for Cloud contact details"
