@@ -7,9 +7,9 @@
         "archetype_config": {
             "parameters": {
                 "ES-Root-Policies": {
-                    "emailSecurityContact": {
-                        "value": "security_contact@replace_me"
-                    }
+                    "emailSecurityContact": [
+                        "security_contact@replace_me"
+                    ]
                 }
             },
             "access_control": {}
