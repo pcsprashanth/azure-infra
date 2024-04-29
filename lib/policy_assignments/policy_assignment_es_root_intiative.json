@@ -5,7 +5,7 @@
   "properties": {
       "description": "This initiative contains all Initiatives and Policies applicable to the root scope",
       "displayName": "",
-      "notScopes": [],
+      "notScopes": ["Tenant Root Group/mim-root / Landing Zones / cpcd"],
       "parameters": {
         "logAnalytics": {
           "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/${root_scope_id}-mgmt/providers/Microsoft.OperationalInsights/workspaces/${root_scope_id}-lal"
